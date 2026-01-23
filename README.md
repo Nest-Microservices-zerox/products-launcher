@@ -1,10 +1,3 @@
-## Dev
-
-1. Clonar el repositorio
-2. Crear un .env basado en el .env.template
-3. Ejecutar el comando `git submodule update --init --recursive` para reconstruir los sub-módulos
-4. Ejecutar el comando `docker compose up --build`
-
 ### Pasos para crear los Git Submodules
 
 
@@ -37,12 +30,23 @@ Si se trabaja en el repositorio que tiene los sub-módulos, **primero actualizar
 Si se hace al revés, se perderán las referencias de los sub-módulos en el repositorio principal y tendremos que resolver conflictos.
 
 
+## Dev
 
-
-# Prod
 1. Clonar el repositorio
 2. Crear un .env basado en el .env.template
-3. Ejecutar el comando
+3. Para reconstruir los sub-módulos, ejecutar el comando:
+```
+git submodule update --init --recursive
+```
+4. Ejecutar el comando:
+```
+docker compose up --build
+```
+
+## Prod
+1. Clonar el repositorio
+2. Crear un .env basado en el .env.template
+3. Ejecutar el comando:
 ```
 docker compose -f docker-compose.prod.yml build
 ```
